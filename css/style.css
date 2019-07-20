@@ -13,8 +13,10 @@
 	src:url(../fonts/PlayfairDisplay-Regular.ttf),
 }
 @font-face{
-	font-family:'',sans-serif;
-	src:url(../fonts/.ttf),
+	font-family:'heebo',sans-serif;
+	src:url(../fonts/Heebo-Light.ttf),
+	src:url(../fonts/Heebo-Medium.ttf),
+	src:url(../fonts/Heebo-Regular.ttf),
 }
 @font-face{
 	font-family:'',sans-serif;
@@ -30,10 +32,10 @@
 *{padding:0;margin:0;border:0;outline:0;}
 html{scroll-behavior:smooth;}
 body{
-	font-family:'', sans-serif;
-	font-size:16px;
-	font-weight:400;
-	color:#777;
+	font-family:'heebo',sans-serif;
+	font-size:15px;
+	font-weight:300;
+	color:#000;
 }
 ul{	padding:0;	margin:0;}
 ul li{list-style-type:none;}
@@ -415,7 +417,6 @@ p{padding:0;margin:0;}
 }
 .quation-area {
 	padding: 0 100px 35px;
-	background-color: #999;
 	height: 160px;
 	width:100%;
 }
@@ -427,6 +428,8 @@ p{padding:0;margin:0;}
 	top: 0;
 	left: 0;
 	padding: 0 100px;
+	animation: testimonials 60s infinite;
+	opacity:0;
 }
 .clients-message blockquote, p {
 	font-family: 'OpenSans', sans-serif;
@@ -439,11 +442,161 @@ p{padding:0;margin:0;}
 .clients-message p a {
 	color:#C59E35;
 }
+.clients-message:nth-child(1) {animation-delay:0s}
+.clients-message:nth-child(2) {animation-delay:15s}
+.clients-message:nth-child(3) {animation-delay:30s}
+.clients-message:nth-child(4) {animation-delay:45s}
+@keyframes testimonials {
+	0%{opacity:0;}
+	5%{opacity:1;}
+	23%{opacity:1}
+	25%{opacity:0}
+	60%{opacity:0}
+	100%{opacity:0}
+}
+
+
+/* REVIEWS BOTTOM */
+.review2{}
+.review2 > .container{max-width:100%;}
+.review-info{}
+.review-info h6{
+	font-family: 'hebbo', sans-serif;
+	font-weight:500;
+	font-size:11px;
+	color:#CCAB56;
+	text-transform:uppercase;
+	letter-spacing:3px;
+} 	/* hebbo 500*/
+
+.review-info h3{
+	font-family: 'Playfair',serif;
+	font-size:35px;
+	font-weight:400;
+	padding:20px 0 65px;
+}	/* trirong 400 */
+.review-info p{
+	padding-bottom:40px;
+} 	/* hebbo 300*/
+.review-info a{
+	display:inline-block;
+	text-align:center;
+	background:#2a2a2a;
+	color:#fff;
+	font-family: 'hebbo', sans-serif;
+	font-weight:300;
+	font-size:14px;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	padding:14px 20px;
+	transition:0.5s;
+}	/* hebbo 300*/
+.review-info a:hover{
+	background-color:#191919;
+	transition:0.5s;
+}
+
+/* REVIEWS SECTION-3 */
+.review3{
+	background:#EEEEEE;
+	padding-bottom:35px;
+}	
+.review-event{
+	height:auto;
+	width:100%;
+	display:block;
+	position:relative;
+
+}
+.review-event img{
+	height:100%;
+	width:100%;
+}
+.ylw-overlay{
+	height:100%;
+	width:100%;
+	background-color:rgba(190,153,57,0.8);
+	position:absolute;
+	left:0;
+	top:0;
+	opacity:0;
+	transition:0.3s;
+}
+.overlay-txt{
+	position:absolute;
+	transform:translate(-50%,-50%);
+	left:50%;
+	top:50%;
+	text-align:center;
+}
+.overlay-txt img{
+	height:80px;
+	width:auto;
+	opacity:0;
+	transition:0.3s;
+}
+.review-event:hover .ylw-overlay{
+	opacity:1;
+	transition:0.3s;
+}
+.review-event:hover .overlay-txt img{
+	opacity:1;
+	transition:0.3s;
+}
+.event-caption{
+	background-color:#fff;
+	padding:25px 30px;
+}
+.event-caption h6{
+	font-family: 'hebbo', sans-serif;
+	font-weight:500;
+	font-size:11px;
+	color:#CCAB56;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	color:#898989;
+	margin-bottom:10px;
+}
+.event-caption > h4 > a{
+	font-family: 'Playfair',serif;
+	font-size: 22px;
+	color:#202020;
+	transition:0.5s;
+}
+
+.event-caption > h4 > a:hover{
+	color:#BE9939;
+	transition:0.5s;
+}
+.more-event {
+	height: 50px;
+	width: 200px;
+	border: 1px solid #d9d9d9;
+	margin: 55px auto 0;
+	transition: 0.5s;
+}
+.more-event a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 50px;
+	font-family: 'OpenSans', sans-serif;
+	font-size: 13px;
+	color: #555;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+}
+.more-event:hover{
+	border: 1px solid #999;
+	transition: 0.5s;
+}
+
+/* FOOTER */
 
 
 
-
-
+/* MEDIA QUERIES */
 @media only screen and (max-width: 767px)  {
 	.service-info div {
 		margin-bottom:50px;
@@ -457,6 +610,22 @@ p{padding:0;margin:0;}
 	.room-img{
 		text-align:center;
 		padding-bottom:30px;
+	}
+	.review-info{
+		padding:50px 0;
+		text-align:center;
+	}
+	.review-info img{
+		text-align:center!important;
+	}
+	#one{order:1;}
+	#two{order:2;}
+	#three{order:4;}
+	#four{order:3;}
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+	.event-wrapper{
+		margin-bottom:30px!important;
 	}
 }
 
