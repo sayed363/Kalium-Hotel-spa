@@ -1039,6 +1039,118 @@ footer ul li a:hover:after{
 	color: #333;
 }
 
+/* =============== */
+/* ACTIVITIES_PAGE */
+/* =============== */
+.activities .container{
+	max-width:100%!important;
+}
+.activities-txt{}
+.activities-wrapper{
+	display:flex;
+	align-items:center;
+}
+.activities-txt h4{
+    font-family: '',sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: rgba(190,153,57);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.activities-txt h3{
+	font-family: 'Playfair',serif!important;
+    font-size: 35px;
+    font-weight: 500;
+    color: #000;
+    line-height: 1;
+    padding-top: 10px;
+}
+.activities-txt p{
+	padding-top: 50px!important;
+	padding:0 15px;
+}
+
+/* ============= */
+/* EVENTS_PAGE */
+/* ============= */
+.event-wrapper{
+	border:1px solid #eaeaea;
+	margin-bottom:30px;
+}
+.event-img{
+	position:relative;
+	height:100%;
+	width:100%;
+}
+.event-img blockquote{
+	font-family: 'Playfair',serif;
+	font-size:18px;
+	padding:30px;
+	background:#eee;
+}
+.event-img img{
+	width:100%;
+	cursor:pointer;
+}
+.event-overlay{
+	background-color:rgba(190,153,57,0.8);
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0;
+	cursor:pointer;
+	transition: all 0.2s ease-in;
+}
+.event-img:hover .event-overlay{
+	opacity:1!important;
+	transition: all 0.2s ease-in;
+	z-index:999;
+}
+.event-overlay img{
+	width:120px;
+	position:absolute;
+	transform:translate(-50%,-50%);
+	top:50%;
+	left:50%;
+}
+.event-info {
+	padding:0 30px 35px;
+}
+.event-info h4 a{
+	font-family:'Playfair',serif;
+	font-size:25px;
+	display:inline-block;
+	padding:30px 0 20px;
+	color:#111!important;
+}
+.event-details{}
+.event-time{
+	font-family:'heebo',sans-serif;
+	font-size:11px;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	color:#999;
+	padding:30px 0 10px;
+}
+.event-more a{
+	font-family:'heebo',sans-serif;
+	font-size:11px;
+	text-transform:uppercase;
+	letter-spacing:3px;
+	color:#BA8F38b3;
+	transition: all 0.2s ease-in;
+}
+.event-more a:hover{
+	color:#BA8F38;
+	transition: all 0.2s ease-in;
+}
+
+
 
 
 /* MEDIA QUERIES */

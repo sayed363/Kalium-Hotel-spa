@@ -28,5 +28,11 @@ $(document).ready(function(){
 	  $grid.isotope({ filter: filterValue });
 	});
 	
+	// masonry for (events page).
+	$('.grid').isotope({
+	  itemSelector: '.grid-item',
+	  percentPosition: true,
+	})
+	
 });
 
