@@ -14,6 +14,7 @@
 }
 @font-face{
 	font-family:'heebo',sans-serif;
+	src:url(../fonts/Heebo-Thin.ttf),
 	src:url(../fonts/Heebo-Light.ttf),
 	src:url(../fonts/Heebo-Medium.ttf),
 	src:url(../fonts/Heebo-Regular.ttf),
@@ -53,7 +54,6 @@ p{padding:0;margin:0;}
 	font-weight: 500;
 	color: #000;
 	padding-top: 50px;
-	/* margin-bottom:-60px; */
 	text-align:center;
 	letter-spacing:2px;
 }
@@ -133,13 +133,12 @@ p{padding:0;margin:0;}
 /* NAVIGATION BAR */
 nav {
 	width:100%;
-	position:fixed;
 	transition:1s all ease-in;
-	background: rgba(255,255,255,0.2);
-	border-bottom: 1px solid #EEEEEE;
+	background: rgba(255,255,255,0);
+	/* border-bottom: 1px solid #EEEEEE; */
 }
 nav.black {
-	background: rgba(255,255,255,1);
+	background: rgba(0,0,0,1)!important;
 	transition:1s all ease-in;
 }
 
@@ -152,6 +151,9 @@ nav ul li a{
 	font-size:15px;
 	color:#000!important;
 	text-transform:uppercase;
+}
+nav ul li a:last-child{
+	padding-right: 0!important;
 }
 
 
@@ -559,9 +561,13 @@ header{margin-top:-106px;}
 	opacity:1;
 	transition:0.3s;
 }
-.review-event:hover .overlay-txt img{
-	opacity:1;
-	transition:0.3s;
+.review-event:hover .overlay-txt img {
+	opacity: 1 !important;
+	transition: 0.2s;
+}
+.review-event:hover .overlay-txt {
+	opacity: 1 !important;
+	transition: 0.2s;
 }
 .event-caption{
 	background-color:#fff;
@@ -655,7 +661,6 @@ footer ul li a:hover:after{
 	opacity:1;
 	transition:0.3s;
 }
-.footer-icon{}
 .footer-icon img{
 	height:60px;
 	width:auto;
@@ -789,6 +794,253 @@ footer ul li a:hover:after{
 
 
 
+/*DINING PAGE*/
+/*section-1/4 (dinning)*/
+.dining-main-section{
+	padding:80px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+.dinnng > h4{
+	font-family: 'Playfair',serif;
+	font-size: 60px;
+	font-weight: 500;
+	color: #000;
+	text-align: left;
+	padding-bottom: 15px;
+}
+.dinnng > .para1, .para2 {
+	font-family: 'OpenSans', sans-serif;
+	font-size: 14px;
+	color: #555;
+}
+.dinnng > .para1 strong, .para2 strong{
+	font-weight: bold;
+}
+.dinning-top-img img {
+	height: 370px !important;
+	width: auto;
+	box-shadow: 0px 0px 50px #888;
+}
+
+
+/*section-2/4 (dishes)*/
+.favourite-dishes{
+	padding-top:0px;
+}
+.title-tex{
+	padding-bottom:60px;
+}
+.dish-info{
+	height: 100%;
+	width:100%;
+}
+.dish-info img{
+	height: 100%;
+	width:auto;
+}
+.dish-info h4 {
+	font-family: 'Playfair',serif;
+	font-size: 25px;
+	font-weight: 500;
+	color: #000;
+	text-align: left;
+	padding: 0 30px 10px;
+}
+.dish-info p{
+	padding: 0 30px 0;
+}
+
+
+/*section-3/4 (Dishes choose options)*/
+#choose-dish {
+	background-color: #F4F2E9;
+	padding-bottom: 25px;
+}
+#choose-dish ul {
+	padding-left: 15px;
+	margin: 30px 0 35px;
+}
+#choose-dish ul li {
+	margin-right: 18px;
+}
+#choose-dish ul li a {
+	font-family: 'playfair',serif;
+	font-size: 21px;
+	color: #888;
+	padding: 6px 0;
+	display: inline-block;
+	position: relative;
+	border-bottom: 1px solid #cecece;
+}
+#choose-dish ul li a.active {
+	border-bottom: 1px solid #222;
+	color:#222;
+}
+
+.single-dish {
+	padding-bottom: 40px;
+}
+.dish-title {
+	background: transparent;
+	color: #444;
+	text-transform: uppercase;
+	font-family: 'hebbo',sans-serif;
+	font-size: 12px;
+	letter-spacing: 2px;
+	margin-bottom: 15px;
+}
+.single-dish > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px dotted #bbb;
+}
+.dish-name, .dish-price {
+	background: transparent;
+	color: #333;
+	font-family: 'Playfair',serif;
+	font-size: 22px;
+	padding-bottom: 8px;
+}
+.dish-name{}
+.dish-price{}
+.single-dish > p {
+	font-family: 'heebo',sans-serif;
+	font-size: 15px;
+	color: #999;
+	padding-top: 10px;
+}
+
+/*section-4/4 (Dishes' picture full-width)*/
+.dish-gallery > .container{
+	max-width: 100%;
+}
+.food-single-img{
+	height: 100%;
+	width: 100%;
+}
+
+/*SPA PAGE*/
+.spa-main li {
+	width: 100%;
+	color: #fff;
+	background-image: linear-gradient(to top, rgba(255,255,255,1), rgba(255, 255, 255, 0.7)),url(../img/spa/main-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: none;
+	height: 100vh!important;
+	position: relative;
+}
+.spa-title{
+	
+	position: absolute;
+	left:50%;
+	bottom: 80px;
+	transform: translateX(-50%);
+	text-align: center;
+}
+.spa-main .spa-title > h4 {
+	font-family: 'Playfair',serif;
+	font-size: 60px;
+	font-weight: 500;
+	color: #66218E;
+	text-align: center;
+	letter-spacing: -1px;
+}
+
+.spa-main .spa-title > img {
+	padding: 40px 0px;
+	width:280px;
+}
+.spa-caption h4{
+	font-family: 'Playfair',serif;
+	font-size: 25px;
+	font-weight: 500;
+	color: #000;
+	letter-spacing: 2px;
+}
+.spa-caption p{
+	font-family: 'heebo',sans-serif;
+	font-size: 16px;
+	font-weight: 100!important;
+	color: #333;
+	padding-bottom: 25px;
+}
+
+/*SECTION-2/3 PACKAGE TAB*/
+.package-compare{
+	background-image: linear-gradient(to right, rgba(255,255,255,0.5), rgba(255, 255, 255, 0.5)),url(../img/spa/spa-bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:cover;
+	width:100%;
+	padding: 0 0 60px;
+}
+.package-compare ul li{margin-right:5px;}
+.package-compare ul li a {
+	background: #fafafa;
+	transition: all 0.5s ease-in;
+	padding: 12px 20px;
+	font-size: 20px;
+	font-family: 'Playfair',serif;
+	color: #848484;
+	border-radius: 5px 5px 0 0;
+}
+.package-compare ul li a:hover {
+	background: #F2F2F2;
+	transition: all 0.5s ease-in;
+}
+.package-compare ul li a.active {
+	background: #F2F2F2;
+	color:#444;
+}
+.package-compare .dish-title{
+	padding-top:30px;
+}
+#package-compare > h6{
+	letter-spacing: 0px;
+	padding-left:15px;
+	text-align: left!important;
+}
+#package-compare > p{
+	font-family:'heebo',sans-serif;
+	font-weight: 100!important;
+	padding-left:15px;
+	padding-bottom:40px;
+	color:#373737;
+}
+
+
+/*SECTION-3/3 MASSAGE-TYPE*/
+#massage{
+	padding:50px 0;
+}
+.massage-title {
+	padding-bottom: 55px;
+}
+.massage-title > p {
+	padding-top: 10px;
+	font-size: 16px;
+	color: #444;
+}
+.massage-type {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 0 0 20px;
+}
+.massage-type img {
+	height: 38px;
+}
+.massage-type h4 {
+	font-family: 'Playfair', serif;
+	font-size: 25px;
+	padding-left: 15px;
+	color: #333;
+}
+
+
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 767px)  {
 	.service-info div {
@@ -815,10 +1067,39 @@ footer ul li a:hover:after{
 	#two{order:2;}
 	#three{order:4;}
 	#four{order:3;}
+
+	/*favourite-dishes*/
+	
+	#col2,#col4,#col6,#col8{
+		background: #FFF5EB;
+	}
+	.dish-info{
+		text-align: center!important;
+		padding:30px;
+		margin-bottom: 10px!important;
+	}
+	.dish-info h4, p{
+		text-align: center!important;
+	}
+	.dish-img img{
+		width: 100%;
+	}
+	.massage-title > p {
+		text-align: left!important;
+	}
 }
 @media only screen and (max-width: 991px) and (min-width: 768px) {
 	.event-wrapper{
 		margin-bottom:30px!important;
+	}
+	.dish-img img{
+		width:100%;
+		height:auto;
+	}
+	#col2,#col4,#col6,#col8{
+		background: #FFF5EB;
+		margin-left:30px;
+		margin-right:-30px;
 	}
 }
 

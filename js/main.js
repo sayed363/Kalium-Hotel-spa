@@ -7,9 +7,8 @@ $(document).ready(function(){
 	
 	// sticky navbar
 	$("#sticker").sticky({
-		topSpacing:0,
-		zIndex:9
-	
+	 	topSpacing:0,
+	 	zIndex:9
 	});
 	
 	
@@ -31,16 +30,3 @@ $(document).ready(function(){
 	
 });
 
-
-
-
-
-$(window).on("scroll", function() {
-	if($(window).scrollTop()){
-		$('nav').addClass('.black');
-	}
-	else
-	{
-		$('nav').removeClass('.black');		
-	}
-})
