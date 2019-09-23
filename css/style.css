@@ -155,7 +155,9 @@ nav ul li a{
 nav ul li a:last-child{
 	padding-right: 0!important;
 }
-
+.navbar-expand-md .navbar-nav .nav-link {
+	padding-left: 1.25rem!important;
+}
 
 /* MAIN SLIDER */
 header{margin-top:-106px;}
